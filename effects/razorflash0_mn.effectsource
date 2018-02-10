@@ -1,0 +1,29 @@
+{
+  "kind" : "razorflash0_lr",
+  "definition" : {
+    "duration" : 0.05,
+    "loops" : true,
+    "start" : {
+      "particles" : [
+        [ "razorburn1_lr" ]
+      ],
+      "sounds" : [
+        [ ]
+      ]
+    },
+    "particles" : [
+      [ "razorburn1_lr" ], [ "razorburn2_lr" ]
+    ],
+    "sounds" : [
+      [ ]
+    ],
+    "stop" : {
+      "particles" : [
+        [ "razorburn2_lr" ]
+      ],
+      "sounds" : [
+        [ ]
+      ]
+    }
+  }
+}

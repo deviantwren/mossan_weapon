@@ -1,0 +1,31 @@
+{
+  "projectileName" : "mossanprebeam",
+  "image" : "mossanprebeam.png",
+  "animationCycle" : 0.15,
+  "damageKindImage" : "mossanbeamicon.png",
+  "timeToLive" : 0.17,
+  "frameNumber" : 6,
+  "speed" : 56,
+  "orientationLocked" : false,
+  "damagePoly" : [  ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "flippable" : true,
+  "emitters" : [ "razorflash1_mn" ],
+  "damageKind" : "mossanplasma",
+  "lightColor" : [60, 99, 66],
+  "flickerPeriod" : 0.1,
+  "flickerMinIntensity" : 0.6,
+  "flickerMaxIntensity" : 0.8,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "mossanwidebeam",
+      "inheritDamageFactor" : 1
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/instruments/musicbox/a0.ogg" ]
+    }
+  ]
+}

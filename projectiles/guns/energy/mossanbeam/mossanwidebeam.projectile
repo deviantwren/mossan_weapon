@@ -1,0 +1,16 @@
+{
+  "projectileName" : "mossanwidebeam",
+  "image" : "mossanwidebeam.png",
+  "animationCycle" : 0.15,
+  "damageKindImage" : "mossanbeamicon.png",
+  "frameNumber" : 4,
+  "speed" : 250,
+  "orientationLocked" : false,
+  "damagePoly" : [ [0, 1], [120, 1], [120, -1], [0, -1] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "flippable" : true,
+  "emitters" : [ "razorflash2_mn" ],
+  "damageKind" : "mossanplasma",
+  "lightColor" : [100, 128, 9]
+}

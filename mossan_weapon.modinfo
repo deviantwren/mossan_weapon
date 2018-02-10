@@ -1,0 +1,11 @@
+{
+	"name" : "mossan_armor",
+	"version" : "",
+	"path" : ".",
+	"dependencies" : [ "mossan_race" ],
+	"metadata" : {
+		"author" : "Mntle",
+		"description" : "Replaces the mossan_race mod's dependency upon Floran weapon assets with its own unique and original weapon assets and crafting station.",
+		"version" : "1.3.3"
+	}
+}

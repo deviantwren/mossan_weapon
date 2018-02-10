@@ -1,0 +1,23 @@
+{
+  "projectileName" : "mossanwidebowbeam",
+  "image" : "mossanwidebeam.png",
+  "animationCycle" : 0.35,
+  "damageKindImage" : "mossanbeamicon.png",
+  "timeToLive" : 0.35,
+  "frameNumber" : 4,
+  "speed" : 800,
+  "orientationLocked" : false,
+  "damagePoly" : [ [0, 1], [120, 1], [120, -1], [0, -1] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "flippable" : true,
+  "emitters" : [ "razorflash2_mn" ],
+  "damageKind" : "mossanplasma",
+  "lightColor" : [100, 128, 9],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/mn_reapersmoke/mn_reapersmoke.config"
+    }
+  ]
+}

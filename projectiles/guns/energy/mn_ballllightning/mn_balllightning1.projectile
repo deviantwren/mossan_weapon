@@ -1,0 +1,34 @@
+{
+  "projectileName" : "mn_balllightning1",
+  "physics" : "laser",
+  "timeToLive" : 0.5,
+  "image" : "mn_balllightning.png",
+  "animationCycle" : 0.15,
+  "lightColor" : [0, 255, 245],
+  "frameNumber" : 4,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "mn_balllightning2",
+      "inheritDamageFactor" : 0
+    }
+  ],
+  "speed" : 14,
+  "power" : 15,
+  "damageKind" : "electric",
+  "damagePoly" : [ [-10, 0], [-7, -7], [0, -10], [7, -7], [10, 0], [7, 7], [0, 10], [-7, 7] ],
+  "statusEffects" : [ "electrified" ],
+  "damageRepeatTimeout" : 0.25,
+
+  "orientationLocked" : true,
+  "fullbright" : true,
+  "emitters" : [ "electricplasma" ],
+
+  "piercing" : true,
+  "bounces" : 0,
+
+  "scripts" : [ "/projectiles/activeitems/staff/balllightning/balllightning.lua" ],
+
+  "waitTime" : 0.5,
+  "moveTime" : 0.2
+}

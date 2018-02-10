@@ -1,0 +1,168 @@
+{
+  "itemName" : "mn_tier0beam",
+  "level" : 6,
+  "price" : 9280,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "An experimental energy-beam rifle designed by the Mossan species.",
+  "shortdescription" : "Beam Razor",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+
+  "inventoryIcon" : [
+     { "image" : "mn_tier0beam.png:idle.1" },
+	 { "image" : "mn_tier0beamfullbright.png:18" }
+  ],
+
+  "animation" : "/items/active/weapons/ranged/unrand/mn_tier0beam/beamrazor.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "/items/active/weapons/ranged/unrand/mn_tier0beam/mn_tier0beam.png:idle.1",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/ranged/unrand/mn_tier0beam/mn_tier0beamflash.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : { "stateTypes" : { "middle" : {
+      "default" : "idle",
+      "states" : {
+        "idle" : {
+          "frames" : 100,
+          "cycle" : 10.0,
+          "mode" : "loop"
+        },
+		"cooldown" : {
+          "frames" : 5,
+          "cycle" : 0.5,
+          "mode" : "transition",
+          "transition" : "idle"
+        }
+      }}},
+      "parts" : { "middlefullbright" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0.625, 0.125],
+          "zLevel" : 1,
+          "transformationGroups" : ["weapon"],
+          "fullbright" : true
+        },
+        "partStates" : {
+          "middle" : {
+            "idle" : {
+              "properties" : {
+                "image" : "/items/active/weapons/ranged/unrand/mn_tier0beam/mn_tier0beamfullbright.png:<frame><paletteSwaps>"
+              }
+            }
+          }
+        }
+      }}
+    },
+    "sounds" : {
+      "fire" : ["/sfx/instruments/musicbox/a0.ogg"],
+      "altFire" : [ "/sfx/gun/lightningcoil1.ogg" ]
+    }
+  },
+  "baseOffset" : [0.625, 0.125],
+  "muzzleOffset" : [0, 0],
+  "barrelOffset" : [0, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/unrand/mn_tier0beam/beamrazor.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/unrand/mn_tier0beam/beamrazorfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.01,
+    "baseDps" : 35,
+    "energyUsage" : 100,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.0055,
+
+    "burstCount" : 1,
+    "burstTime" : 0.5,
+    "fireType" : "auto",
+
+    "projectileType" : "mossanprebeam",
+    "projectileParameters" : {},
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 0.7,
+        "weaponRotation" : 1.2,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "cooldown" : {
+        "duration" : 0.01,
+        "armRotation" : 0.7,
+        "weaponRotation" : 1.2,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      }
+    }
+  },
+
+  "altAbility" : {
+    "name" : "Sticky Plasma Mines",
+    "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
+    "class" : "AltFireAttack",
+
+    "fireTime" : 1.25,
+    "energyUsage" : 35,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.01,
+    "fireType" : "auto",
+
+    "useParticleEmitter" : false,
+
+    "projectileType" : "mn_balllightning_spurt",
+    "projectileParameters" : {},
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 0.5,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.5,
+        "armRotation" : 0.5,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}
